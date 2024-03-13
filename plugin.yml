@@ -1,0 +1,12 @@
+name: dagger
+description: call dagger module
+author: https://github.com/bcjio
+requirements:
+- dagger
+configuration:
+  properties:
+    module:
+      type: string
+    call:
+      type: string
+  additionalProperties: false
