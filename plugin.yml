@@ -9,4 +9,6 @@ configuration:
       type: string
     call:
       type: string
+    version:
+      type: string
   additionalProperties: false
