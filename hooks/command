@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 
 set -ueo pipefail
 
@@ -7,7 +7,8 @@ DIR="$(cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd)"
 if [[ -n "$BUILDKITE_PLUGIN_DAGGER_VERSION" ]]; then
   export DAGGER_VERSION="$BUILDKITE_PLUGIN_DAGGER_VERSION"
   export BIN_DIR=${BIN_DIR:-/usr/bin}
-
+  current_version=""
+  
   if which dagger > /dev/null; then
     current_version=$(dagger version | cut -d' ' -f2)
   fi
